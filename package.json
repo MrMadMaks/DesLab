@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MrMadMaks/Food-Sense.git"
+    "url": "git+https://github.com/MrMadMaks/DesLab.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MrMadMaks/Food-Sense/issues"
+    "url": "https://github.com/MrMadMaks/DesLab/issues"
   },
-  "homepage": "https://github.com/MrMadMaks/Food-Sense#readme",
+  "homepage": "https://github.com/MrMadMaks/DesLab#readme",
   "devDependencies": {
     "browser-sync": "^2.27.9",
     "gulp": "^4.0.2",

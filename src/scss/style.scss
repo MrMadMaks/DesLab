@@ -1,8 +1,8 @@
 /*********************FONTS**********************/
 @font-face {
     font-family: "Gilroy";
-    src: url("fonts/Gilroy-Regular.woff2") format("woff2"),
-    url("fonts/Gilroy-Regular.woff") format("woff");
+    src: url("../fonts/Gilroy-Regular.woff2") format("woff2"),
+    url("../fonts/Gilroy-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -10,8 +10,8 @@
 
 @font-face {
     font-family: "Gilroy";
-    src: url("fonts/Gilroy-Medium.woff2") format("woff2"),
-    url("fonts/Gilroy-Medium.woff") format("woff");
+    src: url("../fonts/Gilroy-Medium.woff2") format("woff2"),
+    url("../fonts/Gilroy-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -19,8 +19,8 @@
 
 @font-face {
     font-family: "Gilroy";
-    src: url("fonts/Gilroy-Semibold.woff2") format("woff2"),
-    url("fonts/Gilroy-Semibold.woff") format("woff");
+    src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Semibold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -28,9 +28,188 @@
 
 @font-face {
     font-family: "Gilroy";
-    src: url("fonts/Gilroy-Bold.woff2") format("woff2"),
-    url("fonts/Gilroy-Bold.woff") format("woff");
+    src: url("../fonts/Gilroy-Bold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
+}
+
+/*********************VARIABLES**********************/
+
+$title-color: #333333;
+$primary-color: #0066CC;
+$text-color: #1D1D1F;
+
+/*********************RESET**********************/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+body {
+    font-family: "Gilroy";
+    font-style: normal;
+}
+
+/*********************WRAPPERS**********************/
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+._container {
+    margin: 0 auto;
+    max-width: 883px;
+    //padding: 0 20px
+    //box-sizing: content-box
+    @media screen and (max-width: 768px) {
+        max-width: 545px;
+    }
+    @media screen and (max-width: 580px) {
+        max-width: 440px;
+    }
+}
+
+/*********************HEADER**********************/
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    min-height: 72px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin: 0 -20px;
+    }
+    &__item {
+        padding: 0 20px;
+        & > a {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 32px;
+            color: $title-color;
+            cursor: pointer;
+            transition: all .3s;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+/*********************MAIN**********************/
+
+main {
+    padding: 83px 0 104px 0;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    & > li {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #52575F;
+        & + li:before {
+            content: "/";
+            padding: 8px;
+            color: #E1E1E1;
+        }
+        & > a {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #52575F;
+            cursor: pointer;
+            transition: all .3s;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    text-align: center;
+    color: $title-color;
+    margin: 15px 0 94px 0;
+}
+
+.table {
+    &__title {
+        margin-bottom: 9px;
+    }
+    &__descr {
+        margin-bottom: 55px;
+    }
+    &__tab {
+        width: 100%;
+        border-collapse: collapse;
+        & th, & td {
+            text-align: left;
+            padding: 16px 32px;
+        }
+        & th:nth-last-child(2), & td:nth-last-child(2) {
+            text-align: right;
+        }
+        & th {
+            background-color: #F5F5F7;
+            border-top: 1px solid #E1E1E1;
+            border-bottom: 1px solid #E1E1E1;
+            
+        }
+        & td {
+            border-bottom: 1px solid #E1E1E1;
+        }
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    color: $title-color;
+}
+
+.descr {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: $text-color;
 }
